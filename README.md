@@ -70,7 +70,7 @@ template-invoker对外部委托方法的查找，基于namespace。你可以定�
     var t = new template('temp-img');
     t.replace(data, invoker);
     //不指定委托上下文
-    var t2 = new template('temp-img');
+    var t2 = new template('temp-div');
     t2.replace(data);
 
 
