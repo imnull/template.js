@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="template.js"></script>
+</head>
+
+<body>
+
+<ul>
+	<li>1111111</li>
+	<li id="test">{id}</li>
+	<li>99999</li>
+</ul>
+
+<script type="text/javascript">
+
+var data = [
+	{ id : 222222222222222 },
+	{ id : 33333333333333 },
+	{ id : 44444444444444444 },
+	{ id : 5555555555555 },
+	{ id : 6666666 },
+	{ id : 777777777 },
+	{ id : 8888888888 }
+];
+
+var t = new template('test');
+t.replace(data);
+
+setTimeout(function(){
+	t.reset();
+	t.replace({ id : '---------------' });
+}, 2000)
+
+</script>
+
+</body>
+</html>
