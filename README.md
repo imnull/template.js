@@ -55,10 +55,11 @@ JavaScript前端轻量级模板引擎
         node.appendChild(img);
     }
 
-特别说明一下：template-invoker对外部委托方法的查找，是基于namespace的。例如，你可以定义一个函数库封装所有的相关委托，在替换模板时将该库制定给replace函数，那么所有的委托方法都将在这个库内进行查找。不指定时，查找域则从window开始。例如：
+template-invoker对外部委托方法的查找，基于namespace。你可以定义一个函数库，封装所有的相关委托，在替换模板时将该库指定为委托的上下文，那么所有的委托方法都将在这个库内进行查找。不指定时，查找域则从window开始。例如：
 
     //HTML
     <img id="temp-img" template-invoker="img" />
+    <div id="temp-div" template-invoker="invoker.div"></div>
 
 
     //JS
@@ -68,4 +69,8 @@ JavaScript前端轻量级模板引擎
     };
     var t = new template('temp-img');
     t.replace(data, invoker);
+    //不指定委托上下文
+    var t2 = new template('temp-img');
+    t2.replace(data);
+
 
