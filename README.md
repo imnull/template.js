@@ -8,7 +8,7 @@ JavaScript前端轻量级模板引擎
 
 关于该项目更多信息请移步：[http://mkjs.net/?cat=7](http://mkjs.net/?cat=7)
 
-关于数据架构统一的信息请异步：[schema.js](https://github.com/imnull/schema.js)
+关于数据架构统一的信息请移步：[schema.js](https://github.com/imnull/schema.js)
 
 ================
 ### 1、模板标记
